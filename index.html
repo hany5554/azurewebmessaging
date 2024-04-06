@@ -1,0 +1,55 @@
+html><head>
+        <title>Basic demo for web messenger implementations</title>
+
+        <script type="text/javascript" charset="utf-8">
+            
+            function AzureLogin() {
+
+                window.location.href = "https://login.microsoftonline.com/0acbbe51-0f7e-4be6-a3dd-4ec6f531645f/oauth2/v2.0/authorize?\
+client_id=cad985be-7db7-47e1-94d3-5b319364ae74\
+&response_type=code\
+&redirect_uri=https://github.com/hany5554/azurewebmessaging" + window.location.hostname + "/azure.html\
+&scope=openid%20profile"
+
+            }
+
+            function WebMessengerlogin() {
+                window.location.href = "https://" + window.location.hostname + "/webmessenger.html";
+            }
+
+            function GuestMessengerLogin() {
+                window.location.href = "https://" + window.location.hostname + "/guestmessenger.html";
+            }
+
+            function HeadlessMessengerLogin() {
+                window.location.href = "https://" + window.location.hostname + "/headless.html";
+            }
+
+            function OktaLogin() {
+                window.location.href = "https://" + window.location.hostname + "/okta.html";
+            }
+
+        </script>
+		
+		
+		
+    </head>
+    <body>
+        <h2>This is a demo page for web messaging</h2>
+
+        <button id="azurelogin" onclick="AzureLogin()">Start Azure authenticated web messenger</button>
+        <br>
+        <button id="webmessengerlogin" onclick="WebMessengerlogin()">Start web messenger snippet</button>
+        <br>
+        <button id="guestmessengerlogin" onclick="GuestMessengerLogin()">Start guest messenger</button>
+        <br>
+        <button id="headlessmessengerlogin" onclick="HeadlessMessengerLogin()">Start headless messenger</button>
+        <br>
+        <button onclick="OktaLogin()">Start Authentication with Okta</button>
+
+
+
+        
+    
+</body></html>
+		
